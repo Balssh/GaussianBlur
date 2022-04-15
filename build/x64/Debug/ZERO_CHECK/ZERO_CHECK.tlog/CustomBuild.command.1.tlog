@@ -1,0 +1,10 @@
+^D:\PROJECTS\INTEL\BUILD\CMAKEFILES\D07EDE3530AF72F5343B4D7A728D1428\GENERATE.STAMP.RULE
+setlocal
+D:\Software\cmake-3.23.1-windows-x86_64\bin\cmake.exe -SD:/Projects/Intel -BD:/Projects/Intel/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Projects/Intel/build/gaussian.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
